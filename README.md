@@ -7,7 +7,7 @@ Patch the WiFi Smart Net Camera v380
 
 ## Installation
 
-Download binary from the releases page or clone and build with `cargo`.
+Download binary from the [releases page](https://github.com/bcaller/v380-ipcam-firmware-patch/releases) or clone and build with `cargo`.
 
 ## Usage
 
