@@ -61,3 +61,5 @@ If you've already applied a patch, you might need `-h V380E2_CA` or whatever the
 ## Hints
 
 `exshell_bfu.sh` is run as root at the very start of the update process.
+
+Blog post: [How to change the v380 root password](https://ℬ㏒.㎈ℓℯℛ.ⓧⓨℤ/v380-ipcam-firmware-patching).
