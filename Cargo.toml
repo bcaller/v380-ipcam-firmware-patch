@@ -1,6 +1,6 @@
 [package]
 name = "patchv380"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["bcaller <bcaller@users.noreply.github.com>"]
 edition = "2018"
 
@@ -16,3 +16,4 @@ tempfile = "3.1.0"
 opt-level = 'z'  # Optimize for size.
 lto = true
 panic = 'abort'
+codegen-units = 1
