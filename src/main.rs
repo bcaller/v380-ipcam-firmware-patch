@@ -73,11 +73,8 @@ pub fn read(patch_file: &str, extract_dir: Option<&str>) -> io::Result<()> {
     for _i in 0..n_sections {
         let mut filename_buffer = vec![0; 0x38];
         f.read_exact(&mut filename_buffer)?;
-        let filename = str::from_utf8(&filename_buffer)
-            .unwrap()
-            .split('\u{00}')
-            .next()
-            .unwrap();
+        let null_terminated = filename_buffer.splitn(2, |c| *c == 0u8).next().unwrap();
+        let filename = str::from_utf8(&null_terminated).unwrap();
         let length = f.read_u32::<LittleEndian>()?;
         f.seek(SeekFrom::Current(0x04))?;
         println!("{} ({} bytes, {})", filename, length, filename_to_type(filename));
